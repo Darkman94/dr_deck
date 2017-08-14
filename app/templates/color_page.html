@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dr. Deck - {{ color }}
+{% endblock %}
+
+{% block page_content %}
+	<div class="page-header">
+	<h1> {{ color }} commanders </h1>
+	</div>
+
+	<div class="container">
+	{% for cmdr in commanders %}
+		<a href="/{{ color }}/{{ commanders[cmdr] }}">{{ cmdr }}</a>
+	{% endfor %}
+	</div>
+{% endblock %}
